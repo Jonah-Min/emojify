@@ -23,6 +23,38 @@
   color: #61dafb;
 }
 
+.header {
+  margin-top: 24px;
+  font-size: 27px;
+  width: 100%;
+  display: inline-block;
+}
+
+.emoji-string-input {
+  margin-top: 16px;
+  width: 50%;
+  text-align: center;
+  height: 30px;
+  font-size: 22px;
+}
+
+.emoji-string {
+  margin-top: 16px;
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+.title {
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+  margin-top: 16px;
+  text-decoration: underline;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
