@@ -13,7 +13,7 @@ class EmojifyApp extends React.PureComponent {
     let emojiString = '';
 
     inputList.forEach(letter => {
-      if(EMOJI_MAP[letter.toLowerCase()]) {
+      if (EMOJI_MAP[letter.toLowerCase()]) {
         const emojiList = EMOJI_MAP[letter.toLowerCase()];
         emojiString += emojiList[Math.floor(Math.random() * emojiList.length)];
       } else {
@@ -27,9 +27,9 @@ class EmojifyApp extends React.PureComponent {
   render() {
     return (
       <div className="App">
-        <span 
-          className="header" 
-          role="img" 
+        <span
+          className="header"
+          role="img"
           aria-label="The HubSpot Emoji Phrase Generator"
         >
           🔥The HubSpot Emoji Phrase Generator🔥
