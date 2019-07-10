@@ -5,6 +5,7 @@ html, body, #root {
 .App {
   text-align: center;
   height: 100%;
+  width: 100%;
   cursor: url('./fire.png'), auto; 
   display: inline-block;
 }
@@ -67,7 +68,7 @@ html, body, #root {
 }
 
 .bottom-left {
-  background-image: url(/static/media/googleblob.aac3dd09.jpg);
+  background-image: url('./googleblob.jpg');
   height: 200px;
   width: 200px;
   background-size: contain;
