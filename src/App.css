@@ -32,35 +32,29 @@ html, body, #root {
 
 .header {
   margin-top: 24px;
-  font-size: 27px;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-size: 30px;
   width: 100%;
   display: inline-block;
 }
 
 .emoji-string-input {
-  margin-top: 16px;
+  margin-top: 20px;
   width: 50%;
   text-align: center;
   height: 30px;
   font-size: 22px;
   cursor: url('./100.png'), auto;
+  font-family: "Comic Sans MS", cursive, sans-serif;
 }
 
 .emoji-string {
-  margin-top: 16px;
+  margin-top: 20px;
   width: 75%;
   margin-left: auto;
   margin-right: auto;
   overflow-wrap: break-word;
   word-wrap: break-word;
-}
-
-.title {
-  width: 100%;
-  display: inline-block;
-  text-align: center;
-  margin-top: 16px;
-  text-decoration: underline;
 }
 
 @keyframes App-logo-spin {
@@ -70,4 +64,14 @@ html, body, #root {
   to {
     transform: rotate(360deg);
   }
+}
+
+.bottom-left {
+  background-image: url(/static/media/googleblob.aac3dd09.jpg);
+  height: 200px;
+  width: 200px;
+  background-size: contain;
+  display: block;
+  position: absolute;
+  bottom: 0;
 }

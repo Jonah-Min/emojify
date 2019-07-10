@@ -39,10 +39,10 @@ class EmojifyApp extends React.PureComponent {
           placeholder="Enter a phrase"
           onChange={this.updateEmojiString}
         />
-        <span className="title">Your custom emoji</span>
         <div className="emoji-string">
           {this.state.emojiString}
         </div>
+        <div className="bottom-left" />
       </div>
     );
   }
