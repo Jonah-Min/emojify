@@ -56,6 +56,7 @@ html, body, #root {
   margin-right: auto;
   overflow-wrap: break-word;
   word-wrap: break-word;
+  font-family: "Comic Sans MS", cursive, sans-serif;
 }
 
 @keyframes App-logo-spin {
