@@ -13,9 +13,18 @@ class EmojifyApp extends React.PureComponent {
     const inputString = e.target.value;
     const inputList = inputString.split('');
     let emojiString = '';
+    let quoteCount = 0;
 
     inputList.forEach(letter => {
-      if (EMOJI_MAP[letter.toLowerCase()]) {
+      if (letter === '"') {
+        if (quoteCount === 0) {
+          emojiString += ':airquote-open:';
+          quoteCount++;
+        } else {
+          emojiString += ':airquote-close:';
+          quoteCount--;
+        }
+      } else if (EMOJI_MAP[letter.toLowerCase()]) {
         const emojiList = EMOJI_MAP[letter.toLowerCase()];
         emojiString += emojiList[Math.floor(Math.random() * emojiList.length)];
       } else {
