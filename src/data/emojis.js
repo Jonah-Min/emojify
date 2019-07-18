@@ -39,4 +39,5 @@ export const EMOJI_MAP = {
     "&": [":dnd_amp:", ":ampersand:"],
     "!": [":exc:", ":exclamation:", ":heavy_heart_exclamation_mark_ornament:", ":grey_exclamation::bangbang:"],
     "?": [":question:", ":grey_question:", ":riddler_question_mark:"],
+    "_": [":underscore:"],
 };
