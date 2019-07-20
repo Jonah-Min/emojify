@@ -18,7 +18,7 @@ export const EMOJI_MAP = {
     "p": [":fancy-p:", ":distorted-p:", ":scrabble_p:", ":colorful-p:", ":twitter_letter_p:", ":circle-game:", ":contact-properties:", ":flyers:", ":social-pinterest:", ":playstation:", ":personalization-plat:", ":p13n:"],
     "q": [":fancy-q:", ":distorted-q:", ":scrabble_q:", ":colorful-q:", ":twitter_letter_q:", ":quandora:"],
     "r": [":fancy-r:", ":distorted-r:", ":scrabble_r:", ":colorful-r:", ":twitter_letter_r:", ":snakeoil:", ":rust:", ":revolut:"],
-    "s": [":fancy-s:", ":distorted-s:", ":scrabble_s:", ":colorful-s:", ":twitter_letter_s:", ":canvas_s:", ":worm:", ":cool-s:", ":dollarspin:", ":stripe:", ":stanford:", ":speedcurve:", ":skittle:", ":seattle-mariners:"],
+    "s": [":fancy-s:", ":distorted-s:", ":scrabble_s:", ":colorful-s:", ":twitter_letter_s:", ":canvas_s:", ":worm:", ":dollarspin:", ":stripe:", ":stanford:", ":speedcurve:", ":skittle:", ":seattle-mariners:"],
     "t": [":fancy-t:", ":distorted-t:", ":scrabble_t:", ":colorful-t:", ":t:", ":twitter_letter_t:", ":add:", ":ampelrot:", ":today:", ":vols:", ":this-guy:", ":text:", ":teslamotors:", ":screw:"],
     "u": [":fancy-u:", ":distorted-u:", ":scrabble_u:", ":colorful-u:", ":twitter_letter_u:", ":colts:", ":union:", ":underline:", ":udemy:"],
     "v": [":fancy-v:", ":distorted-v:", ":scrabble_v:", ":colorful-v:", ":twitter_letter_v:", ":+2:", ":canvas_v:", ":check:", ":vue:", ":vechain:", ":v_:", ":down:", ":gocats:", ":vitess:"],
