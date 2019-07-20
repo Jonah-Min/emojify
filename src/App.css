@@ -57,6 +57,43 @@ html, body, #root {
   overflow-wrap: break-word;
   word-wrap: break-word;
   font-family: "Comic Sans MS", cursive, sans-serif;
+  display: inline-block;
+}
+
+.copy-button-container {
+  margin-top: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 150px;
+}
+
+.copy-button {
+  display: inline-block;
+  padding: 0.6em 1.2em;
+  border: 0.16em solid rgba(255,255,255,0);
+  border-radius: 2em;
+  font-size: 12px;
+  box-sizing:  border-box;
+  text-decoration: none;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  color: #FFFFFF;
+  text-shadow: 0 0.04em 0.04em rgba(0,0,0,0.35);
+  text-align: center;
+  transition: all 0.2s;
+  background-color: #4e9af1;
+}
+
+.copy-button:hover {
+  cursor: url('./ok-hand.png'), auto; 
+}
+
+.copied-string {
+  margin-top: 8px;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  font-family: "Comic Sans MS", cursive, sans-serif;
 }
 
 @keyframes App-logo-spin {

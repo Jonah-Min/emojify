@@ -1,19 +1,30 @@
 import React from 'react';
 import './App.css';
 import { EMOJI_MAP } from './data/emojis';
+import { CopyToClipboard } from 'react-copy-to-clipboard';
 
 class EmojifyApp extends React.PureComponent {
   state = {
     emojiString: "",
+    copied: false,
   };
 
   updateEmojiString = e => {
     const inputString = e.target.value;
     const inputList = inputString.split('');
     let emojiString = '';
+    let quoteCount = 0;
 
     inputList.forEach(letter => {
-      if (EMOJI_MAP[letter.toLowerCase()]) {
+      if (letter === '"') {
+        if (quoteCount === 0) {
+          emojiString += ':airquote-open:';
+          quoteCount++;
+        } else {
+          emojiString += ':airquote-close:';
+          quoteCount--;
+        }
+      } else if (EMOJI_MAP[letter.toLowerCase()]) {
         const emojiList = EMOJI_MAP[letter.toLowerCase()];
         emojiString += emojiList[Math.floor(Math.random() * emojiList.length)];
       } else {
@@ -21,7 +32,7 @@ class EmojifyApp extends React.PureComponent {
       }
     });
 
-    this.setState({ emojiString });
+    this.setState({ emojiString, copied: false });
   }
 
   render() {
@@ -39,11 +50,28 @@ class EmojifyApp extends React.PureComponent {
           placeholder="Enter a phrase"
           onChange={this.updateEmojiString}
         />
-        <div className="emoji-string">
+        <span className="emoji-string">
           {this.state.emojiString}
-        </div>
+        </span>
+        {this.state.emojiString.length ? (
+          <div className="copy-button-container">
+            <CopyToClipboard
+              className="copy-button"
+              text={this.state.emojiString}
+              onCopy={() => this.setState({ copied: true })}>
+              <button>Copy Emoji!</button>
+            </CopyToClipboard>
+          </div>
+        ) : null}
+        {this.state.copied ? (
+          <span
+            className="copied-string"
+            role="img"
+            aria-label="Copied">
+            Copied! 👌
+          </span>) : null}
         <div className="bottom-left" />
-      </div>
+      </div >
     );
   }
 }
