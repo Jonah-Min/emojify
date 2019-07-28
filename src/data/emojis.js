@@ -22,7 +22,7 @@ export const EMOJI_MAP = {
     "t": [":fancy-t:", ":distorted-t:", ":scrabble_t:", ":colorful-t:", ":t:", ":twitter_letter_t:", ":add:", ":ampelrot:", ":today:", ":vols:", ":this-guy:", ":text:", ":teslamotors:", ":screw:", ":airpods:", ":seedling:", ":palm_tree:"],
     "u": [":fancy-u:", ":distorted-u:", ":scrabble_u:", ":colorful-u:", ":twitter_letter_u:", ":colts:", ":union:", ":underline:", ":udemy:"],
     "v": [":fancy-v:", ":distorted-v:", ":scrabble_v:", ":colorful-v:", ":twitter_letter_v:", ":+2:", ":canvas_v:", ":check:", ":vue:", ":vechain:", ":v_:", ":down:", ":gocats:", ":vitess:"],
-    "w": [":fancy-w:", ":distorted-w:", ":scrabble_w:", ":colorful-w:", ":twitter_letter_w:", ":+3:", ":wumbo:", ":wp:", ":workday:", ":westworld:", ":wellesley:", ":wegmans:", ":tungsten:"],
+    "w": [":fancy-w:", ":distorted-w:", ":scrabble_w:", ":colorful-w:", ":twitter_letter_w:", ":+3:", ":wumbo:", ":wp:", ":workday:", ":westworld:", ":wellesley:", ":wegmans:", ":tungsten:", ":muscle::muscle-right:"],
     "x": [":fancy-x:", ":distorted-x:", ":scrabble_x:", ":colorful-x:", ":twitter_letter_x:", ":check-box-checked:", ":cingular:", ":xmen:", ":custom-modules:", ":excel:", ":spacex:", ":social-xing:", ":remove:", ":red_cross_but_rotated_45_degrees_so_as_not_to_be_breaking_the_geneva_convention:", ":red-x: ", ":nexus:", ":missing-emoji-3:", ":heavy_multiplication_x:", ":x:", ":negative_squared_cross_mark:", ":scissors:", ":hammer_and_pick:", ":hammer_and_wrench:", ":crossed_swords:"],
     "y": [":fancy-y:", ":distorted-y:", ":scrabble_y:", ":colorful-y:", ":twitter_letter_y:", ":yubico:", ":yesterday:", ":y-combinator:"],
     "z": [":fancy-z:", ":distorted-z:", ":scrabble_z:", ":colorful-z:", ":twitter_letter_z:", ":zeny:", ":zenhub:", ":zello:"],
@@ -51,6 +51,7 @@ export const EMOJI_MAP = {
     "|": [":orange-bar-mid:", ":plunger:", ":scoutshonor:", ":serrano:"],
     "=": [":equals:"],
     "$": [":heavy_dollar_sign:"],
+    ".": ["big-big-if-true-1-0:"],
 };
 
 export const BIGRAM_MAP = {
