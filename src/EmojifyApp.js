@@ -7,6 +7,7 @@ class EmojifyApp extends React.PureComponent {
   state = {
     emojiString: "",
     copied: false,
+    announce: false,
   };
 
   findBigrams = text => {
@@ -37,6 +38,11 @@ class EmojifyApp extends React.PureComponent {
     const inputString = e.target.value;
     const text = this.findBigrams(inputString.toLowerCase());
     let emojiString = '';
+
+    if (this.state.announce) {
+      emojiString += ':speaking_head_in_silhouette::mega-reversed::transparent:';
+    }
+
     let quoteCount = 0;
 
     text.forEach(letter => {
@@ -75,6 +81,16 @@ class EmojifyApp extends React.PureComponent {
           aria-label="The HubSpot Emoji Phrase Generator"
         >
           🔥The HubSpot Emoji Phrase Generator🔥
+        </span>
+        <span className="toggles">
+          <label>
+            <input
+              id="announce"
+              type="checkbox"
+              checked={this.state.announce}
+              onChange={() => this.setState({ announce: !this.state.announce })} />
+            <span> Announce mode </span>
+          </label>
         </span>
         <input
           className="emoji-string-input"

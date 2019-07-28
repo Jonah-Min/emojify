@@ -33,6 +33,7 @@ html, body, #root {
 
 .header {
   margin-top: 24px;
+  margin-bottom: 20px;
   font-family: "Comic Sans MS", cursive, sans-serif;
   font-size: 30px;
   width: 100%;
@@ -113,4 +114,11 @@ html, body, #root {
   display: block;
   position: absolute;
   bottom: 0;
+}
+
+.toggles {
+  width: 100%;
+  margin: 0 auto;
+  display: inline-block;
+  font-family: "Comic Sans MS", cursive, sans-serif;
 }
