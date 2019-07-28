@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import { EMOJI_MAP } from './data/emojis';
+import { EMOJI_MAP, BIGRAM_MAP } from './data/emojis';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 
 class EmojifyApp extends React.PureComponent {
@@ -9,46 +9,37 @@ class EmojifyApp extends React.PureComponent {
     copied: false,
   };
 
-
-  // def find_bigrams(text):
-  // char_list = []
-  // previous_bigram = False
-  // for i in range(len(text)):
-  //     if previous_bigram:
-  //         previous_bigram = False
-  //         continue
-  //     curr_char = text[i]
-  //     if i < len(text)-1:
-  //         bigram = curr_char + text[i+1]
-  //         if bigram in bigram_map.keys() and random.random() > 0.5:
-  //             char_list.append(bigram)
-  //             previous_bigram = True
-  //         else:
-  //             char_list.append(curr_char)
-  //     else:
-  //         char_list.append(curr_char)
-  // print(char_list)
-  // return char_list
-
-  // def emoji_text(text):
-  // text = find_bigrams(text)
-  // out = [get_char(x) for x in text]
-  // return "".join(out)
-
-  // def get_char(char):
-  // if len(char) == 1:
-  //     return random.choice(emoji_map[char]) if char in emoji_map.keys() else char
-  // elif len(char) == 2:
-  //     return random.choice(bigram_map[char])
-  // return char
+  findBigrams = text => {
+    const inputList = text.split('');
+    const charList = [];
+    let previousBigram = false;
+    inputList.forEach((letter, index) => {
+      if (previousBigram) {
+        previousBigram = false;
+      } else {
+        if (index < inputList.length - 1) {
+          const bigram = letter + inputList[index + 1];
+          if (Object.keys(BIGRAM_MAP).indexOf(bigram) >= 0 && Math.random() < 0.5) {
+            charList.push(bigram);
+            previousBigram = true;
+          } else {
+            charList.push(letter);
+          }
+        } else {
+          charList.push(letter);
+        }
+      }
+    })
+    return charList;
+  }
 
   updateEmojiString = e => {
     const inputString = e.target.value;
-    const inputList = inputString.split('');
+    const text = this.findBigrams(inputString.toLowerCase());
     let emojiString = '';
     let quoteCount = 0;
 
-    inputList.forEach(letter => {
+    text.forEach(letter => {
       if (letter === '"') {
         if (quoteCount === 0) {
           emojiString += ':airquote-open:';
@@ -57,11 +48,18 @@ class EmojifyApp extends React.PureComponent {
           emojiString += ':airquote-close:';
           quoteCount--;
         }
-      } else if (EMOJI_MAP[letter.toLowerCase()]) {
-        const emojiList = EMOJI_MAP[letter.toLowerCase()];
-        emojiString += emojiList[Math.floor(Math.random() * emojiList.length)];
       } else {
-        emojiString += letter;
+        if (letter.length === 1) {
+          if (EMOJI_MAP[letter.toLowerCase()]) {
+            const emojiList = EMOJI_MAP[letter];
+            emojiString += emojiList[Math.floor(Math.random() * emojiList.length)];
+          } else {
+            emojiString += letter;
+          }
+        } else if (letter.length === 2) {
+          const bigramList = BIGRAM_MAP[letter];
+          emojiString += bigramList[Math.floor(Math.random() * bigramList.length)];
+        }
       }
     });
 
