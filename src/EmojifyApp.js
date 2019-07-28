@@ -39,10 +39,6 @@ class EmojifyApp extends React.PureComponent {
     const text = this.findBigrams(inputString.toLowerCase());
     let emojiString = '';
 
-    if (this.state.announce) {
-      emojiString += ':speaking_head_in_silhouette::mega-reversed::transparent:';
-    }
-
     let quoteCount = 0;
 
     text.forEach(letter => {
@@ -68,6 +64,10 @@ class EmojifyApp extends React.PureComponent {
         }
       }
     });
+
+    if (this.state.announce) {
+      emojiString = `:alert::speaking_head_in_silhouette::mega-reversed::transparent:${emojiString}:transparent::alert:`;
+    }
 
     this.setState({ emojiString, copied: false });
   }
