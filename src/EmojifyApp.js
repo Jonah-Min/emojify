@@ -9,6 +9,39 @@ class EmojifyApp extends React.PureComponent {
     copied: false,
   };
 
+
+  // def find_bigrams(text):
+  // char_list = []
+  // previous_bigram = False
+  // for i in range(len(text)):
+  //     if previous_bigram:
+  //         previous_bigram = False
+  //         continue
+  //     curr_char = text[i]
+  //     if i < len(text)-1:
+  //         bigram = curr_char + text[i+1]
+  //         if bigram in bigram_map.keys() and random.random() > 0.5:
+  //             char_list.append(bigram)
+  //             previous_bigram = True
+  //         else:
+  //             char_list.append(curr_char)
+  //     else:
+  //         char_list.append(curr_char)
+  // print(char_list)
+  // return char_list
+
+  // def emoji_text(text):
+  // text = find_bigrams(text)
+  // out = [get_char(x) for x in text]
+  // return "".join(out)
+
+  // def get_char(char):
+  // if len(char) == 1:
+  //     return random.choice(emoji_map[char]) if char in emoji_map.keys() else char
+  // elif len(char) == 2:
+  //     return random.choice(bigram_map[char])
+  // return char
+
   updateEmojiString = e => {
     const inputString = e.target.value;
     const inputList = inputString.split('');
