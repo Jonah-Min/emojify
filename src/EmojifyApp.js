@@ -42,10 +42,10 @@ class EmojifyApp extends React.PureComponent {
     text.forEach(letter => {
       if (letter === '"') {
         if (quoteCount === 0) {
-          emojiString += ':airquote-open:';
+          emojiString += ':airquote-close:';
           quoteCount++;
         } else {
-          emojiString += ':airquote-close:';
+          emojiString += ':airquote-open:';
           quoteCount--;
         }
       } else {
