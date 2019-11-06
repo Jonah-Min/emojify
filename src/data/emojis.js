@@ -72,7 +72,7 @@ export const BIGRAM_MAP = {
     "dd": [":dd:"],
     "ds": [":d-money:"],
     "ed": [":gtabusted3:"],
-    "fr": [":friday:"],
+    "fr": [":calendar-friday:"],
     "gf": [":gf:"],
     "gg": [":gg:"],
     "go": [":golink:"],
